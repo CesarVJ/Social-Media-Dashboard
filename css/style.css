@@ -15,7 +15,7 @@
 
 /* Dark Theme*/
 --Very-Dark-Blue: hsl(230, 17%, 14%);
---Very-Dark-Blue: hsl(232, 19%, 15%);
+--Very-Dark-Blue2: hsl(232, 19%, 15%);
 --Dark-Desaturated-Blue: hsl(228, 28%, 20%);
 --Desaturated-Blue: hsl(228, 34%, 66%);
 
@@ -163,10 +163,10 @@ h1 ~ p{
   font-weight: 600;
   font-size: 14px;
 }
-.positive{
+.positive, .positive.dark{
   color: var(--Lime-Green);
 }
-.negative{
+.negative, .negative.dark{
   color: var(--Bright-Red);
 }
 
@@ -225,6 +225,52 @@ h1 ~ p{
   border-right: 5px solid transparent;
   
   border-top: 5px solid var(--Bright-Red);
+}
+
+.attribution{
+  text-align: center;
+  margin-top: 1.4rem;
+}
+.attribution > a{
+  text-decoration: none;
+  font-weight: bold;
+
+}
+.attribution > a:hover{
+  text-decoration: underline;
+}
+.attribution.dark{
+  color: #fff;
+}
+.attribution.dark a{
+  color: #fff;
+}
+
+/* Dark design */
+body.dark {
+  background-color: var(--Very-Dark-Blue);
+}
+h1.dark,h2.dark, .number.dark, label.dark{
+  color: #fff;
+}
+p.dark{
+  color: var(--Desaturated-Blue);
+}
+.box.dark{
+  background-color: var(--Dark-Desaturated-Blue);
+}
+.box.dark:hover{
+  background-color: var(--Dark-Grayish-Blue);
+}
+#toggle.dark:checked + .slider.dark {
+  background-image:linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+#toggle.dark:focus + .slider.dark {
+  background-image:linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.slider.dark:before{
+  background-color:var(--Very-Dark-Blue)
 }
 
 @media screen and (min-width:720px ){
